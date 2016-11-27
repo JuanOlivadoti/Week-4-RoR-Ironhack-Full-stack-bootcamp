@@ -1,0 +1,15 @@
+<h2>Place your bid</h2>
+
+<h3 style="color:red">Not a valid user</h3>
+
+<%= form_for @bid do |f| %>
+	<%= f.label :amount %><br>
+	<%= f.text_field :amount %><br>
+<br><br>
+	<%= f.label :email %><br>
+	<%= f.text_field :email %>
+<br><br>
+<%= f.submit "Save" %>
+<% end %>
+
+<%= link_to "Or go back", "/users/#{@product.user_id}/products/#{@product.id}" %>

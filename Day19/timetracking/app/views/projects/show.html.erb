@@ -1,0 +1,14 @@
+<h1>Time tracking tool</h1>
+
+<h2>Projects</h2>
+
+	<% if @my_project.description.present? %>
+		<p> <%= @my_project.description %> </p>
+	<% end %>
+	<%= link_to "Add time entry", "/projects/#{@my_project.id}/time_entries/new" %>
+	
+	<%= link_to "Back", "/projects/new" %>
+
+	<%= link_to "All", "/projects" %>
+
+</ul>

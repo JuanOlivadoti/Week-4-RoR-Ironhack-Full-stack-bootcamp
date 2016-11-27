@@ -1,0 +1,14 @@
+<h1><%= "User nr.#{@user.id}"%> Products</h1>
+
+
+<ul>
+	<% @user_products.each do |product| %>
+	<li><%= product.title %></li>
+	<li><%= product.description %></li>
+	<li><%= product.deadline %></li>
+	<li><%= link_to "User nr.#{product.user_id}", "/users/#{product.user_id}" %></li>
+	<br>
+	<% end %>
+</ul>
+
+<%= link_to "Back to user", "/users/#{@user.id}" %>

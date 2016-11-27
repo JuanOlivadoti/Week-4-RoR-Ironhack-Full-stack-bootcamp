@@ -1,0 +1,9 @@
+<h1>Auction site</h1>
+
+<%= link_to "New user", "/users/new" %>
+
+<ul>
+	<% @all_products.each do |product| %>
+	<li><%= link_to "User nr.#{product.title}", "/users/#{product.user_id}/products/#{product.id}" %></li> <br>
+	<% end %>
+</ul>

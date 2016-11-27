@@ -1,0 +1,17 @@
+<h1>Products new_product</h1>
+
+<h3>New product for User nr. <%= "#{@user.id}" %></h3>
+
+<%= form_for [@user, @product] do |f| %>
+	<%= f.label :title %><br>
+	<%= f.text_field :title %><br>
+<br><br>
+	<%= f.label :description %><br>
+	<%= f.text_field :description %><br>
+<br>
+	<%= f.label :deadline %><br>
+	<%= f.date_field :deadline %><br>
+	<p>The deadline showld be at least 10 days from now.</p>
+<br><br>
+<%= f.submit "Save" %>
+<% end %>

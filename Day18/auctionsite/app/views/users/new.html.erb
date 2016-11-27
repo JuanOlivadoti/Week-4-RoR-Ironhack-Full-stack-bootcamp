@@ -1,0 +1,11 @@
+<h1>Users#new</h1>
+
+<%= form_for @user_new do |usr| %>
+	<%= usr.label :name %>
+	<%= usr.text_field :name %>
+	<br>	
+	<%= usr.label :email %>
+	<%= usr.text_field :email %>
+	<br>
+<%= usr.button %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Time tracking tool</h1>
+
+<h3> Edit <%= @my_project.name %></h3>
+
+<%= render "form" %>
+
+<!-- llama al partial form desde edit -->
+
+<%= link_to "Cancel", project_time_entries_path(@my_project) %>

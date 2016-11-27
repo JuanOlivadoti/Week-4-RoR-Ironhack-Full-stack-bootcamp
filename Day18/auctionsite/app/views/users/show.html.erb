@@ -1,0 +1,9 @@
+<h1>User created</h1>
+
+<p><%= @user.id %></p>
+<p><%= @user.name %></p>
+<p><%= @user.email %></p>
+
+<p><%= link_to "User's products", "#{@user.id}/products" %> </p>
+<p><%= link_to "new products", "#{@user.id}/products/new" %> </p>
+<p><%= link_to "Home", "/"%> </p>

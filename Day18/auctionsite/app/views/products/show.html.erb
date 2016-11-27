@@ -1,0 +1,26 @@
+<h1>Auction site</h1>
+
+
+<ul>
+	<li><%= @product.id %></li> 
+	<li><%= @product.description %></li>
+	<li><%= @product.deadline %></li>
+	<li><%= link_to "User nr.#{@product.user_id}", "/users/#{@product.user_id}" %></li><br>
+</ul>
+binding.pry
+<% if DateTime.now > @product.deadline %>
+
+<form action="/users/<%= @product.user_id %>/products/<%= @product.id %>/bids" method="POST">
+	<input type="text" name="amount" id="amount" placeholder="amount to bid" required>
+	<input type="text" name="email" id="email" placeholder="email" required>
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<%= submit_tag "Save" %>
+</form>
+<% end %>
+
+<ul>
+	<% @product_bids.each do |pb| %>
+		<li> <%= "Bid amount #{pb.amount}" %> </li>
+		<li> <%= pb.created_at.strftime("%d %b. %Y") + " - User id nbr. #{pb.user_id}" %> </li> <br>
+	<% end %>
+</ul>

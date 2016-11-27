@@ -1,0 +1,14 @@
+<h1>Time tracking tool</h1>
+
+<h2>Projects</h2>
+
+<ul>
+	<% @projects.each do |project| %>
+	<li> <%= project.name %> 
+		<% if project.description %> 
+		- <%= project.description %>
+		<% end %>
+	</li>
+	<% end %>
+
+</ul>

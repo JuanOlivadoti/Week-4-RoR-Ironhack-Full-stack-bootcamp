@@ -1,0 +1,12 @@
+<h1>Time tracking tool</h1>
+
+<h2>Add a project</h2>
+<%= form_for @my_project do |f| %>
+	<%= f.label :name %><br>
+	<%= f.text_field :name %><br>
+<br><br>
+	<%= f.label :description %><br>
+	<%= f.text_field :description %><br>
+<br>
+	<%= f.button %>
+<% end %>
